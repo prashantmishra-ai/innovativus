@@ -1,0 +1,48 @@
+/* Global styles for the body, a tags, and general elements */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #111;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Main content padding to avoid header overlap */
+main {
+  margin-top: 100px;
+}
+
+/* Responsive styles for the header and nav menu */
+@media (max-width: 768px) {
+  /* Show hamburger button on small screens */
+  .hamburger-button {
+    display: block;
+  }
+
+  /* Hide the nav menu by default on mobile */
+  .nav-menu {
+    display: none;
+  }
+
+  /* If menu is open, display block */
+  .nav-menu.open {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-menu {
+    display: flex;
+  }
+}

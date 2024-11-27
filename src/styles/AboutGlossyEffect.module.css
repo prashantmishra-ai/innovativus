@@ -1,0 +1,41 @@
+/* Gradient Background for Glassy Cards */
+.glassCard {
+  position: relative;
+  background: linear-gradient(135deg, #ff004c, #1a1a1a); /* Gradient for dynamic effect */
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 100%;
+  max-width: 800px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin: 40px auto; /* Adjust space between cards */
+}
+
+.glassCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(255, 0, 0, 0.5);
+}
+
+.glassCard::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, rgba(255, 0, 0, 0.4), rgba(255, 255, 255, 0.4));
+  border-radius: 25px;
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.glassCard:hover::before {
+  opacity: 1;
+}

@@ -1,0 +1,55 @@
+.landingContainer {
+    height: calc(100vh - 150px); /* Adjusted for header and footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a); /* Dark background gradient */
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 80px; /* To account for fixed header */
+  }
+  
+  .companyName {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff004c; /* Red color */
+    margin: 0;
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    margin-top: 20px;
+  }
+  
+  .typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+    border-right: 4px solid #ff004c;
+    box-sizing: border-box;
+  }
+  
+  /* Typewriter animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #ff004c;
+    }
+  }
+  
